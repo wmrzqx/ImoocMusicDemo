@@ -1,11 +1,36 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/mainColor</item>
+        <item name="android:statusBarColor">@color/mainColor</item>
+        <item name="colorAccent">@color/mainColor</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnimationStyle</item>
+    </style>
+
+    <style name="ActivityAnimationStyle" parent="android:Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit</item>
+    </style>
+
+    <style name="CommonToolBar">
+        <item name="android:background">@color/mainColor</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/navBarHeight</item>
+    </style>
+
+    <style name="CommonToolBar.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/navBarTitleSize</item>
+        <item name="android:textColor">@color/commonTitleColor</item>
+    </style>
+
+    <style name="UserInfoEdit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/common_edittext_selector</item>
     </style>
 
 </resources>

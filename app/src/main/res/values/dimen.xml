@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="navBarHeight">56dp</dimen>
+    <dimen name="marginSize">16dp</dimen>
+    <dimen name="navBarTitleSize">22sp</dimen>
+    <dimen name="gridDividerWidth">5dp</dimen>
+</resources>
