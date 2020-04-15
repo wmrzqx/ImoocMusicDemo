@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">ImoocMusicDemo</string>
+    <string name="app_name">我的音乐</string>
+    <string name="title_main">我的音乐</string>
+    <string name="title_login">登录</string>
+    <string name="title_register">注册</string>
+    <string name="title_user_center">个人中心</string>
+    <string name="title_change_password">修改密码</string>
+    <string name="title_album_list">专辑列表</string>
 </resources>

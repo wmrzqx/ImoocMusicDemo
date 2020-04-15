@@ -1,21 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.zqx.imoocmusicdemo"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zqx.imoocmusicdemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
     <application
-        android:allowBackup="true"
+        android:name=".MyApplication"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name=".music.PlayMusicActivity" />
+        <activity
+            android:name=".album.AlbumListActivity"
+            android:label="@string/title_album_list" />
+        <activity
+            android:name=".user.ChangePasswordActivity"
+            android:label="@string/title_change_password" />
+        <activity
+            android:name=".user.UserCenterActivity"
+            android:label="@string/title_user_center" />
+        <activity
+            android:name=".register.RegisterActivity"
+            android:label="@string/title_register" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/title_login" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".homepage.MainActivity"
+            android:label="@string/title_main" />
     </application>
 
 </manifest>
