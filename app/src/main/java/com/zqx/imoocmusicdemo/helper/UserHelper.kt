@@ -2,6 +2,7 @@
 
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.core.content.edit
 import com.blankj.utilcode.util.EncryptUtils
 import com.blankj.utilcode.util.GsonUtils
 import com.zqx.imoocmusicdemo.MyApplication
@@ -36,9 +37,10 @@ class UserHelper private constructor(
     }
 
     fun saveUserBySp(user: UserBean) {
-        val editor = sp.edit()
-        editor.putString(KEY_USER_DATA, GsonUtils.toJson(user, UserBean::class.java))
-        editor.apply()
+        sp.edit(false) { putString(KEY_USER_DATA, GsonUtils.toJson(user, UserBean::class.java)) }
+//        val editor = sp.edit()
+//        editor.putString(KEY_USER_DATA, GsonUtils.toJson(user, UserBean::class.java))
+//        editor.apply()
     }
 
     fun getUserBySp(): UserBean? {
@@ -50,7 +52,8 @@ class UserHelper private constructor(
     }
 
     fun clearLocalUserBySp() {
-        sp.edit().clear().apply()
+        sp.edit(false) { clear() }
+//        sp.edit().clear().apply()
     }
 
     fun isUserLogged(): Boolean {

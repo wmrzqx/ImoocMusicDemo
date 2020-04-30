@@ -7,6 +7,7 @@ import com.blankj.utilcode.util.StringUtils
 import com.zqx.imoocmusicdemo.MyApplication
 import com.zqx.imoocmusicdemo.base.mvp.BasePresenter
 import com.zqx.imoocmusicdemo.bean.UserBean
+import com.zqx.imoocmusicdemo.helper.DataSourceHelper
 import com.zqx.imoocmusicdemo.helper.UserHelper
 
 /**
@@ -37,9 +38,13 @@ class RegisterPresenter(private val model: RegisterModel = RegisterModel()) :
             this.phone = phone
             this.password = EncryptUtils.encryptMD5ToString(password)
         }, {
+            DataSourceHelper.saveDataSourceToRealm({
+                mView?.intoHomepage()
+            }, {
+                mView?.intoHomepage()
+            })
             UserHelper.getInstance(MyApplication.applicationContext)?.saveUserBySp(it)
             mView?.showToast("注册成功")
-            mView?.intoHomepage()
         }, {
             mView?.showToast(it)
         })

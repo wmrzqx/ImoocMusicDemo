@@ -4,4 +4,9 @@
     <dimen name="marginSize">16dp</dimen>
     <dimen name="navBarTitleSize">22sp</dimen>
     <dimen name="gridDividerWidth">5dp</dimen>
+    <dimen name="notify_music_poster_width">72dp</dimen>
+    <dimen name="notify_music_poster_height">72dp</dimen>
+    <dimen name="notify_music_poster_width_big">144dp</dimen>
+    <dimen name="notify_music_poster_height_big">144dp</dimen>
+    <dimen name="notify_music_name_size">16sp</dimen>
 </resources>

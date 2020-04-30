@@ -9,7 +9,7 @@ import java.lang.ref.WeakReference
 open class BasePresenter<V> {
     protected var mViewRef: Reference<V>? = null
 
-    protected var mView: V? = null;
+    protected var mView: V? = null
 
     fun attachView(view: V) {
         mViewRef = WeakReference(view)

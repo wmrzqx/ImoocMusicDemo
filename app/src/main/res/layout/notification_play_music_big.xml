@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_music_poster_big"
+        android:layout_width="@dimen/notify_music_poster_width_big"
+        android:layout_height="@dimen/notify_music_poster_height_big"
+        android:src="@drawable/img1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_play_music_name_big"
+        style="@style/notify_music_name"
+        android:text="歌曲名称"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_play_music_close_big"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/iv_music_poster_big"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/tv_play_music_author_big"
+        style="@style/notify_music_author"
+        android:text="歌曲作者"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_play_music_close_big"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/iv_music_poster_big"
+        app:layout_constraintTop_toBottomOf="@+id/tv_play_music_name_big"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <ImageView
+        android:id="@+id/iv_play_music_close_big"
+        style="@style/notify_music_close_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_play_music_pre_btn_big"
+        style="@style/notify_music_pre_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/iv_music_poster_big"
+        app:layout_constraintTop_toBottomOf="@+id/tv_play_music_author_big" />
+
+    <ImageView
+        android:id="@+id/iv_play_music_btn_big"
+        style="@style/notify_music_play_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toEndOf="@+id/iv_music_poster_big"
+        app:layout_constraintTop_toBottomOf="@+id/tv_play_music_author_big" />
+
+    <ImageView
+        android:id="@+id/iv_play_music_next_big"
+        style="@style/notify_music_next_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toEndOf="@+id/iv_music_poster_big"
+        app:layout_constraintTop_toBottomOf="@+id/tv_play_music_author_big" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

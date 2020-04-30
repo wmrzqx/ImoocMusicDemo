@@ -11,56 +11,64 @@
           "name": "Nostalgic Piano",
           "poster": "http://res.lgdsunday.club/poster-1.png",
           "path": "http://res.lgdsunday.club/Nostalgic%20Piano.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 196000
         },
         {
           "musicId": "102",
           "name": "La Citadelle",
           "poster": "http://res.lgdsunday.club/poster-2.png",
           "path": "http://res.lgdsunday.club/La%20Citadelle.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 161000
         },
         {
           "musicId": "103",
           "name": "Champ de tournesol",
           "poster": "http://res.lgdsunday.club/poster-3.png",
           "path": "http://res.lgdsunday.club/Champ%20de%20tournesol.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 117000
         },
         {
           "musicId": "104",
           "name": "Horizon Flare",
           "poster": "http://res.lgdsunday.club/poster-4.png",
           "path": "http://res.lgdsunday.club/Horizon%20Flare.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 102000
         },
         {
           "musicId": "105",
           "name": "Lovely Piano Song",
           "poster": "http://res.lgdsunday.club/poster-5.png",
           "path": "http://res.lgdsunday.club/Lovely%20Piano%20Song.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 95000
         },
         {
           "musicId": "106",
           "name": "Romantic Inspiration",
           "poster": "http://res.lgdsunday.club/poster-6.png",
           "path": "http://res.lgdsunday.club/Romantic%20Inspiration.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 149000
         },
         {
           "musicId": "107",
           "name": "Brothers Unite",
           "poster": "http://res.lgdsunday.club/poster-7.png",
           "path": "http://res.lgdsunday.club/Brothers%20Unite.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 183000
         },
         {
           "musicId": "108",
           "name": "Amazing Grace",
           "poster": "http://res.lgdsunday.club/poster-8.png",
           "path": "http://res.lgdsunday.club/Amazing%20Grace.mp3",
-          "author": "Kevin MacLeod"
+          "author": "Kevin MacLeod",
+          "duration": 114000
         }
       ]
     },
@@ -75,56 +83,64 @@
           "name": "Nostalgic Piano",
           "poster": "http://res.lgdsunday.club/poster-1.png",
           "path": "http://res.lgdsunday.club/Nostalgic%20Piano.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 196000
         },
         {
           "musicId": "202",
           "name": "La Citadelle",
           "poster": "http://res.lgdsunday.club/poster-2.png",
           "path": "http://res.lgdsunday.club/La%20Citadelle.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 161000
         },
         {
           "musicId": "203",
           "name": "Champ de tournesol",
           "poster": "http://res.lgdsunday.club/poster-3.png",
           "path": "http://res.lgdsunday.club/Champ%20de%20tournesol.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 117000
         },
         {
           "musicId": "204",
           "name": "Horizon Flare",
           "poster": "http://res.lgdsunday.club/poster-4.png",
           "path": "http://res.lgdsunday.club/Horizon%20Flare.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 102000
         },
         {
           "musicId": "205",
           "name": "Lovely Piano Song",
           "poster": "http://res.lgdsunday.club/poster-5.png",
           "path": "http://res.lgdsunday.club/Lovely%20Piano%20Song.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 95000
         },
         {
           "musicId": "206",
           "name": "Romantic Inspiration",
           "poster": "http://res.lgdsunday.club/poster-6.png",
           "path": "http://res.lgdsunday.club/Romantic%20Inspiration.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 149000
         },
         {
           "musicId": "207",
           "name": "Brothers Unite",
           "poster": "http://res.lgdsunday.club/poster-7.png",
           "path": "http://res.lgdsunday.club/Brothers%20Unite.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 183000
         },
         {
           "musicId": "208",
           "name": "Amazing Grace",
           "poster": "http://res.lgdsunday.club/poster-8.png",
           "path": "http://res.lgdsunday.club/Amazing%20Grace.mp3",
-          "author": "Kevin MacLeod"
+          "author": "Kevin MacLeod",
+          "duration": 114000
         }
       ]
     },
@@ -139,56 +155,64 @@
           "name": "Nostalgic Piano",
           "poster": "http://res.lgdsunday.club/poster-1.png",
           "path": "http://res.lgdsunday.club/Nostalgic%20Piano.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 196000
         },
         {
           "musicId": "302",
           "name": "La Citadelle",
           "poster": "http://res.lgdsunday.club/poster-2.png",
           "path": "http://res.lgdsunday.club/La%20Citadelle.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 161000
         },
         {
           "musicId": "303",
           "name": "Champ de tournesol",
           "poster": "http://res.lgdsunday.club/poster-3.png",
           "path": "http://res.lgdsunday.club/Champ%20de%20tournesol.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 117000
         },
         {
           "musicId": "304",
           "name": "Horizon Flare",
           "poster": "http://res.lgdsunday.club/poster-4.png",
           "path": "http://res.lgdsunday.club/Horizon%20Flare.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 102000
         },
         {
           "musicId": "305",
           "name": "Lovely Piano Song",
           "poster": "http://res.lgdsunday.club/poster-5.png",
           "path": "http://res.lgdsunday.club/Lovely%20Piano%20Song.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 95000
         },
         {
           "musicId": "306",
           "name": "Romantic Inspiration",
           "poster": "http://res.lgdsunday.club/poster-6.png",
           "path": "http://res.lgdsunday.club/Romantic%20Inspiration.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 149000
         },
         {
           "musicId": "307",
           "name": "Brothers Unite",
           "poster": "http://res.lgdsunday.club/poster-7.png",
           "path": "http://res.lgdsunday.club/Brothers%20Unite.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 183000
         },
         {
           "musicId": "308",
           "name": "Amazing Grace",
           "poster": "http://res.lgdsunday.club/poster-8.png",
           "path": "http://res.lgdsunday.club/Amazing%20Grace.mp3",
-          "author": "Kevin MacLeod"
+          "author": "Kevin MacLeod",
+          "duration": 114000
         }
       ]
     },
@@ -203,56 +227,64 @@
           "name": "Nostalgic Piano",
           "poster": "http://res.lgdsunday.club/poster-1.png",
           "path": "http://res.lgdsunday.club/Nostalgic%20Piano.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 196000
         },
         {
           "musicId": "402",
           "name": "La Citadelle",
           "poster": "http://res.lgdsunday.club/poster-2.png",
           "path": "http://res.lgdsunday.club/La%20Citadelle.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 161000
         },
         {
           "musicId": "403",
           "name": "Champ de tournesol",
           "poster": "http://res.lgdsunday.club/poster-3.png",
           "path": "http://res.lgdsunday.club/Champ%20de%20tournesol.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 117000
         },
         {
           "musicId": "404",
           "name": "Horizon Flare",
           "poster": "http://res.lgdsunday.club/poster-4.png",
           "path": "http://res.lgdsunday.club/Horizon%20Flare.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 102000
         },
         {
           "musicId": "405",
           "name": "Lovely Piano Song",
           "poster": "http://res.lgdsunday.club/poster-5.png",
           "path": "http://res.lgdsunday.club/Lovely%20Piano%20Song.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 95000
         },
         {
           "musicId": "406",
           "name": "Romantic Inspiration",
           "poster": "http://res.lgdsunday.club/poster-6.png",
           "path": "http://res.lgdsunday.club/Romantic%20Inspiration.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 149000
         },
         {
           "musicId": "407",
           "name": "Brothers Unite",
           "poster": "http://res.lgdsunday.club/poster-7.png",
           "path": "http://res.lgdsunday.club/Brothers%20Unite.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 183000
         },
         {
           "musicId": "408",
           "name": "Amazing Grace",
           "poster": "http://res.lgdsunday.club/poster-8.png",
           "path": "http://res.lgdsunday.club/Amazing%20Grace.mp3",
-          "author": "Kevin MacLeod"
+          "author": "Kevin MacLeod",
+          "duration": 114000
         }
       ]
     },
@@ -267,56 +299,64 @@
           "name": "Nostalgic Piano",
           "poster": "http://res.lgdsunday.club/poster-1.png",
           "path": "http://res.lgdsunday.club/Nostalgic%20Piano.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 196000
         },
         {
           "musicId": "502",
           "name": "La Citadelle",
           "poster": "http://res.lgdsunday.club/poster-2.png",
           "path": "http://res.lgdsunday.club/La%20Citadelle.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 161000
         },
         {
           "musicId": "503",
           "name": "Champ de tournesol",
           "poster": "http://res.lgdsunday.club/poster-3.png",
           "path": "http://res.lgdsunday.club/Champ%20de%20tournesol.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 117000
         },
         {
           "musicId": "504",
           "name": "Horizon Flare",
           "poster": "http://res.lgdsunday.club/poster-4.png",
           "path": "http://res.lgdsunday.club/Horizon%20Flare.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 102000
         },
         {
           "musicId": "505",
           "name": "Lovely Piano Song",
           "poster": "http://res.lgdsunday.club/poster-5.png",
           "path": "http://res.lgdsunday.club/Lovely%20Piano%20Song.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 95000
         },
         {
           "musicId": "506",
           "name": "Romantic Inspiration",
           "poster": "http://res.lgdsunday.club/poster-6.png",
           "path": "http://res.lgdsunday.club/Romantic%20Inspiration.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 149000
         },
         {
           "musicId": "507",
           "name": "Brothers Unite",
           "poster": "http://res.lgdsunday.club/poster-7.png",
           "path": "http://res.lgdsunday.club/Brothers%20Unite.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 183000
         },
         {
           "musicId": "508",
           "name": "Amazing Grace",
           "poster": "http://res.lgdsunday.club/poster-8.png",
           "path": "http://res.lgdsunday.club/Amazing%20Grace.mp3",
-          "author": "Kevin MacLeod"
+          "author": "Kevin MacLeod",
+          "duration": 114000
         }
       ]
     },
@@ -331,56 +371,64 @@
           "name": "Nostalgic Piano",
           "poster": "http://res.lgdsunday.club/poster-1.png",
           "path": "http://res.lgdsunday.club/Nostalgic%20Piano.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 196000
         },
         {
           "musicId": "602",
           "name": "La Citadelle",
           "poster": "http://res.lgdsunday.club/poster-2.png",
           "path": "http://res.lgdsunday.club/La%20Citadelle.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 161000
         },
         {
           "musicId": "603",
           "name": "Champ de tournesol",
           "poster": "http://res.lgdsunday.club/poster-3.png",
           "path": "http://res.lgdsunday.club/Champ%20de%20tournesol.mp3",
-          "author": "Komiku"
+          "author": "Komiku",
+          "duration": 117000
         },
         {
           "musicId": "604",
           "name": "Horizon Flare",
           "poster": "http://res.lgdsunday.club/poster-4.png",
           "path": "http://res.lgdsunday.club/Horizon%20Flare.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 102000
         },
         {
           "musicId": "605",
           "name": "Lovely Piano Song",
           "poster": "http://res.lgdsunday.club/poster-5.png",
           "path": "http://res.lgdsunday.club/Lovely%20Piano%20Song.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 95000
         },
         {
           "musicId": "606",
           "name": "Romantic Inspiration",
           "poster": "http://res.lgdsunday.club/poster-6.png",
           "path": "http://res.lgdsunday.club/Romantic%20Inspiration.mp3",
-          "author": "Rafael Krux"
+          "author": "Rafael Krux",
+          "duration": 149000
         },
         {
           "musicId": "607",
           "name": "Brothers Unite",
           "poster": "http://res.lgdsunday.club/poster-7.png",
           "path": "http://res.lgdsunday.club/Brothers%20Unite.mp3",
-          "author": "Alexander Nakarada"
+          "author": "Alexander Nakarada",
+          "duration": 183000
         },
         {
           "musicId": "608",
           "name": "Amazing Grace",
           "poster": "http://res.lgdsunday.club/poster-8.png",
           "path": "http://res.lgdsunday.club/Amazing%20Grace.mp3",
-          "author": "Kevin MacLeod"
+          "author": "Kevin MacLeod",
+          "duration": 114000
         }
       ]
     }
@@ -391,56 +439,64 @@
       "name": "Nostalgic Piano",
       "poster": "http://res.lgdsunday.club/poster-1.png",
       "path": "http://res.lgdsunday.club/Nostalgic%20Piano.mp3",
-      "author": "Rafael Krux"
+      "author": "Rafael Krux",
+      "duration": 196000
     },
     {
       "musicId": "8",
       "name": "La Citadelle",
       "poster": "http://res.lgdsunday.club/poster-2.png",
       "path": "http://res.lgdsunday.club/La%20Citadelle.mp3",
-      "author": "Komiku"
+      "author": "Komiku",
+      "duration": 161000
     },
     {
       "musicId": "9",
       "name": "Champ de tournesol",
       "poster": "http://res.lgdsunday.club/poster-3.png",
       "path": "http://res.lgdsunday.club/Champ%20de%20tournesol.mp3",
-      "author": "Komiku"
+      "author": "Komiku",
+      "duration": 117000
     },
     {
       "musicId": "10",
       "name": "Horizon Flare",
       "poster": "http://res.lgdsunday.club/poster-4.png",
       "path": "http://res.lgdsunday.club/Horizon%20Flare.mp3",
-      "author": "Alexander Nakarada"
+      "author": "Alexander Nakarada",
+      "duration": 102000
     },
     {
       "musicId": "11",
       "name": "Lovely Piano Song",
       "poster": "http://res.lgdsunday.club/poster-5.png",
       "path": "http://res.lgdsunday.club/Lovely%20Piano%20Song.mp3",
-      "author": "Rafael Krux"
+      "author": "Rafael Krux",
+      "duration": 95000
     },
     {
       "musicId": "12",
       "name": "Romantic Inspiration",
       "poster": "http://res.lgdsunday.club/poster-6.png",
       "path": "http://res.lgdsunday.club/Romantic%20Inspiration.mp3",
-      "author": "Rafael Krux"
+      "author": "Rafael Krux",
+      "duration": 149000
     },
     {
       "musicId": "13",
       "name": "Brothers Unite",
       "poster": "http://res.lgdsunday.club/poster-7.png",
       "path": "http://res.lgdsunday.club/Brothers%20Unite.mp3",
-      "author": "Alexander Nakarada"
+      "author": "Alexander Nakarada",
+      "duration": 183000
     },
     {
       "musicId": "14",
       "name": "Amazing Grace",
       "poster": "http://res.lgdsunday.club/poster-8.png",
       "path": "http://res.lgdsunday.club/Amazing%20Grace.mp3",
-      "author": "Kevin MacLeod"
+      "author": "Kevin MacLeod",
+      "duration": 114000
     }
   ]
 }

@@ -14,16 +14,18 @@ import java.io.InputStream
 class RealmHelper(private val mRealm: Realm = Realm.getDefaultInstance()) {
 
     companion object {
-        private const val REALM_NEW_VERSION: Long = 1
+        private const val REALM_NEW_VERSION: Long = 2L
 
         fun migration() {
-            val conf =
-                RealmConfiguration.Builder()
-                    .schemaVersion(REALM_NEW_VERSION)
-                    .migration(Migration())
-                    .build()
-            Realm.setDefaultConfiguration(conf)
-            Realm.migrateRealm(conf)
+            if (Realm.getDefaultInstance().configuration.shouldDeleteRealmIfMigrationNeeded()) {
+                val conf =
+                    RealmConfiguration.Builder()
+                        .schemaVersion(REALM_NEW_VERSION)
+                        .migration(Migration())
+                        .build()
+                Realm.setDefaultConfiguration(conf)
+                Realm.migrateRealm(conf)
+            }
         }
 
     }
@@ -46,6 +48,10 @@ class RealmHelper(private val mRealm: Realm = Realm.getDefaultInstance()) {
         return mRealm.where(clazz).equalTo(fieldName, value).findFirst()
     }
 
+    fun <E : RealmModel> getAllModel(clazz: Class<E>): MutableList<E>? {
+        return mRealm.where(clazz).findAll()
+    }
+
     fun updateOneModelAsync(
         realmModel: RealmModel,
         onSuccess: () -> Unit,
@@ -66,15 +72,33 @@ class RealmHelper(private val mRealm: Realm = Realm.getDefaultInstance()) {
         }, onSuccess, onError)
     }
 
-    fun createModelFromJson(json: InputStream) {
+    fun createModelFromJson(json: InputStream, onSuccess: () -> Unit, onFailure: () -> Unit) {
         mRealm.executeTransactionAsync({
             it.createObjectFromJson(MusicSourceBean::class.java, json)
         }, {
             LogUtils.i("创建数据库新表成功")
+            onSuccess()
         }, {
             it.printStackTrace()
             LogUtils.i("创建数据库新表失败")
+            onFailure()
         })
+    }
+
+    fun <E : RealmModel> getAllModelById(
+        clazz: Class<E>,
+        fieldName: String,
+        value: String
+    ): MutableList<E>? {
+        return mRealm.where(clazz).equalTo(fieldName, value).findAll()
+    }
+
+    fun <E : RealmModel> getModelById(
+        clazz: Class<E>,
+        fieldName: String,
+        value: String
+    ): E? {
+        return mRealm.where(clazz).equalTo(fieldName, value).findFirst()
     }
 
     fun close() {

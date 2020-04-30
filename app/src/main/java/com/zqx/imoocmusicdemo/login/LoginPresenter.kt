@@ -40,8 +40,11 @@ class LoginPresenter(private val loginModel: LoginContract.ILoginModel = LoginMo
                     }
                 }!!
             )?.saveUserBySp(it)
-            DataSourceHelper.saveDataSourceToRealm()
-            mView?.intoHomepage()
+            DataSourceHelper.saveDataSourceToRealm({
+                mView?.intoHomepage()
+            }, {
+                mView?.intoHomepage()
+            })
         }, {
             mView?.showMsg(it)
         })

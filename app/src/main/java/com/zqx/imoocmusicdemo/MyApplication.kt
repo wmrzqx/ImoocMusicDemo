@@ -2,6 +2,9 @@ package com.zqx.imoocmusicdemo
 
 import android.app.Application
 import com.blankj.utilcode.util.Utils
+import com.bumptech.glide.Glide
+import com.bumptech.glide.GlideBuilder
+import com.bumptech.glide.MemoryCategory
 import com.zqx.imoocmusicdemo.helper.RealmHelper
 import io.realm.Realm
 
@@ -21,7 +24,6 @@ class MyApplication : Application() {
         Realm.init(this)
 
         RealmHelper.migration()
-
     }
 
 }

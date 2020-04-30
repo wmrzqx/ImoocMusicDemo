@@ -1,6 +1,9 @@
 package com.zqx.imoocmusicdemo.adapters
 
 import android.content.Context
+import android.widget.ImageView
+import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.zqx.imoocmusicdemo.R
 import com.zqx.imoocmusicdemo.bean.AlbumBean
 
@@ -15,6 +18,12 @@ class HomepageAlbumAdapter(context: Context, data: MutableList<AlbumBean>) :
     }
 
     override fun onBindViewHolder(holder: BaseViewHolder, data: AlbumBean?) {
+        val ivAlbumPoster = holder.getView<ImageView>(R.id.iv_songlist_cover)
+        val tvAlbumName = holder.getView<TextView>(R.id.tv_songlist_name)
+        val tvAlbumPlayCount = holder.getView<TextView>(R.id.tv_songlist_play_count)
+        Glide.with(mContext).load(data?.poster).into(ivAlbumPoster)
+        tvAlbumName.text = data?.name
+        tvAlbumPlayCount.text = data?.playNum
     }
 
 }

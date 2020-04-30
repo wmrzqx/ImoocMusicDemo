@@ -6,4 +6,9 @@
     <string name="title_user_center">个人中心</string>
     <string name="title_change_password">修改密码</string>
     <string name="title_album_list">专辑列表</string>
+    <string name="label_play">播放</string>
+    <string name="label_pause">暂停</string>
+    <string name="label_next">下一首</string>
+    <string name="label_previous">上一首</string>
+    <string name="label_stop">停止</string>
 </resources>

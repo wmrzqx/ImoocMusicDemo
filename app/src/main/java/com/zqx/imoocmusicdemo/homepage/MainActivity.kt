@@ -1,5 +1,6 @@
 package com.zqx.imoocmusicdemo.homepage
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -8,60 +9,39 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.blankj.utilcode.util.ActivityUtils
+import com.blankj.utilcode.util.ToastUtils
 import com.zqx.imoocmusicdemo.R
 import com.zqx.imoocmusicdemo.adapters.HomepageMusicAdapter
 import com.zqx.imoocmusicdemo.adapters.HomepageAlbumAdapter
-import com.zqx.imoocmusicdemo.album.AlbumListActivity
-import com.zqx.imoocmusicdemo.base.BaseActivity
-import com.zqx.imoocmusicdemo.bean.MusicBean
+import com.zqx.imoocmusicdemo.album.KEY_ALBUM_ID
+import com.zqx.imoocmusicdemo.album.MusicListActivity
+import com.zqx.imoocmusicdemo.base.mvp.BaseMVPActivity
 import com.zqx.imoocmusicdemo.bean.AlbumBean
+import com.zqx.imoocmusicdemo.bean.MusicSourceBean
 import com.zqx.imoocmusicdemo.customviews.GridDividerItemDecoration
+import com.zqx.imoocmusicdemo.music.KEY_MUSIC_ID
 import com.zqx.imoocmusicdemo.music.PlayMusicActivity
 import com.zqx.imoocmusicdemo.user.UserCenterActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.collections.ArrayList
 
-class MainActivity : BaseActivity() {
+class MainActivity :
+    BaseMVPActivity<HomepageContract.IHomepageView, HomepageContract.IHomepagePresenter>(),
+    HomepageContract.IHomepageView {
 
     private var homepageHeader: View? = null
 
     private var homepageAdapter: HomepageMusicAdapter? = null
 
-
     override fun initData(savedInstanceState: Bundle?) {
-        rv_homepage.layoutManager = LinearLayoutManager(this)
-        initHeaderView()
-        val homepageMusicList = ArrayList<MusicBean>()
-        (1..6).forEach {
-            val musicBean = MusicBean()
-            musicBean.name = "最新音乐$it"
-            homepageMusicList.add(musicBean)
-        }
-        homepageAdapter = HomepageMusicAdapter(this, homepageMusicList)
-        rv_homepage.adapter = homepageAdapter
-        homepageAdapter?.setHeader(homepageHeader)
-        homepageAdapter?.setOnItemClickListener { position, data ->
-            ActivityUtils.startActivity(
-                this,
-                PlayMusicActivity::class.java
-            )
-        }
+        mPresenter?.requestMusicSource()
     }
 
-    private fun initHeaderView() {
+    private fun initHeaderView(albums: MutableList<AlbumBean>) {
         homepageHeader =
             layoutInflater.inflate(R.layout.header_homepage_songlist, null, false)
         val rvHomepageRecommend: RecyclerView? =
             homepageHeader?.findViewById(R.id.rv_homepage_recommend)
-        val homepageSongList = ArrayList<AlbumBean>()
-        for (i in 1..6) {
-            val homepageSongListBean =
-                AlbumBean()
-            homepageSongListBean.name = "推荐歌单$i"
-            homepageSongListBean.playNum = (i * 100 * 10000).toString()
-            homepageSongList.add(homepageSongListBean)
-        }
-        val homepageSongListAdapter = HomepageAlbumAdapter(this, homepageSongList)
+        val homepageSongListAdapter = HomepageAlbumAdapter(this, albums)
         rvHomepageRecommend?.adapter = homepageSongListAdapter
         rvHomepageRecommend?.addItemDecoration(
             GridDividerItemDecoration(
@@ -72,8 +52,12 @@ class MainActivity : BaseActivity() {
         )
         val gridLayoutManager = GridLayoutManager(this, 3)
         rvHomepageRecommend?.layoutManager = gridLayoutManager
-        homepageSongListAdapter.setOnItemClickListener { position, data ->
-            ActivityUtils.startActivity(this, AlbumListActivity::class.java)
+        homepageSongListAdapter.setOnItemClickListener { _, data ->
+            ActivityUtils.startActivity(
+                Intent(this, MusicListActivity::class.java).putExtra(
+                    KEY_ALBUM_ID, data?.albumId
+                )
+            )
         }
     }
 
@@ -97,6 +81,30 @@ class MainActivity : BaseActivity() {
 
     override fun isShowBack(): Boolean {
         return false
+    }
+
+    override fun createPresenter(): HomepageContract.IHomepagePresenter {
+        return HomepagePresenter()
+    }
+
+    override fun refreshUI(musicSource: MusicSourceBean) {
+        rv_homepage.layoutManager = LinearLayoutManager(this)
+        initHeaderView(musicSource.album!!)
+        homepageAdapter = HomepageMusicAdapter(this, musicSource.hot!!)
+        rv_homepage.adapter = homepageAdapter
+        homepageAdapter?.setHeader(homepageHeader)
+        homepageAdapter?.setOnItemClickListener { position, data ->
+            ActivityUtils.startActivity(
+                Intent(
+                    this,
+                    PlayMusicActivity::class.java
+                ).putExtra(KEY_MUSIC_ID, data?.musicId)
+            )
+        }
+    }
+
+    override fun showToast(msg: String) {
+        ToastUtils.showShort(msg)
     }
 
 }

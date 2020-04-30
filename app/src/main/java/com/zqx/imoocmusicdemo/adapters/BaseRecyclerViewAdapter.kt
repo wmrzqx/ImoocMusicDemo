@@ -13,10 +13,12 @@ import androidx.recyclerview.widget.RecyclerView
 abstract class BaseRecyclerViewAdapter<T>(context: Context) :
     RecyclerView.Adapter<BaseRecyclerViewAdapter.BaseViewHolder>() {
 
-    private val TYPE_HEADER = 0
-    private val TYPE_NORMAL = 1
+    companion object {
+        private const val TYPE_HEADER = 0
+        private const val TYPE_NORMAL = 1
+    }
 
-    private var mContext = context
+    protected var mContext = context
 
     private var mData: MutableList<T>? = null
 
@@ -24,8 +26,11 @@ abstract class BaseRecyclerViewAdapter<T>(context: Context) :
 
     private var mOnItemClickListener: ((Int, T?) -> Unit)? = null
 
-    constructor(context: Context, data: MutableList<T>) : this(context) {
-        mData = data
+    constructor(context: Context, data: MutableList<T>?) : this(context) {
+        mData = when (data) {
+            null -> ArrayList()
+            else -> data
+        }
     }
 
     fun setHeader(header: View?) {
@@ -52,8 +57,7 @@ abstract class BaseRecyclerViewAdapter<T>(context: Context) :
     }
 
     override fun getItemCount(): Int {
-        var itemCount = 0
-        itemCount = if (mHeaderView != null) {
+        return if (mHeaderView != null) {
             when {
                 mData != null -> mData!!.size + 1
                 else -> 1
@@ -64,7 +68,6 @@ abstract class BaseRecyclerViewAdapter<T>(context: Context) :
                 else -> 0
             }
         }
-        return itemCount
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {

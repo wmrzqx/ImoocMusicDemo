@@ -8,4 +8,5 @@
     <color name="colorHighlight">#C80F1F</color>
     <color name="commonLabelColor">#333333</color>
     <color name="infoColor">#888888</color>
+    <color name="notification_bg">#E91E63</color>
 </resources>

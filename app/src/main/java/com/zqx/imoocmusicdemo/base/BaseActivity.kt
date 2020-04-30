@@ -65,7 +65,7 @@ abstract class BaseActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
         supportActionBar?.setDisplayHomeAsUpEnabled(isShowBack())
-        if (isShowBack()) getToolbar()?.setNavigationIcon(R.mipmap.back)
+        if (isShowBack()) getToolbar()?.setNavigationIcon(R.drawable.back)
         getToolbar()?.setNavigationOnClickListener { finish() }
     }
 

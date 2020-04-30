@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_mine"
-        android:icon="@mipmap/me"
+        android:icon="@drawable/me"
         android:title="我的"
         app:showAsAction="always" />
 </menu>

@@ -26,12 +26,25 @@ class Migration : RealmMigration {
             startMigrate(realm, MusicSourceBean::class.java)
             currentVersion++
         }
+        if (currentVersion == 1L) {
+            startMigrate(realm, MusicBean::class.java)
+            currentVersion++
+        }
     }
 
+    /**
+     * 利用反射来迁移Realm数据库
+     */
     private fun startMigrate(realm: DynamicRealm, clazz: Class<out RealmModel>) {
         val schema = realm.schema
-        val realmObjectSchema = schema.create(clazz.simpleName)
+        var realmObjectSchema = schema.get(clazz.simpleName)
+        if (realmObjectSchema == null) {
+            realmObjectSchema = schema.create(clazz.simpleName)
+        }
         clazz.declaredFields.forEach {
+            if (realmObjectSchema?.hasField(it.name)!! || it.name == "CREATOR") {
+                return@forEach
+            }
             val type = it.type
             if (type.isAssignableFrom(RealmList::class.java)) {
                 val genericType = it.genericType

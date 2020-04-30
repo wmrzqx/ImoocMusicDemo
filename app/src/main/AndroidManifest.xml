@@ -6,20 +6,32 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
         android:name=".MyApplication"
         android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".music.PlayMusicActivity" />
+        <service
+            android:name=".music.PlayMusicService2"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
         <activity
-            android:name=".album.AlbumListActivity"
+            android:name=".music.PlayMusicActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".album.MusicListActivity"
             android:label="@string/title_album_list" />
         <activity
             android:name=".user.ChangePasswordActivity"
@@ -42,7 +54,14 @@
         </activity>
         <activity
             android:name=".homepage.MainActivity"
-            android:label="@string/title_main" />
+            android:label="@string/title_main"
+            android:launchMode="singleTask" />
+
+        <receiver android:name="androidx.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

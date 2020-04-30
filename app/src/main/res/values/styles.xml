@@ -33,4 +33,39 @@
         <item name="android:textColorHint">@color/common_edittext_selector</item>
     </style>
 
+    <style name="notify_music_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/commonLabelColor</item>
+        <item name="android:textSize">@dimen/notify_music_name_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="notify_music_author">
+        <item name="android:textColor">@color/infoColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="notify_music_play_btn">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:src">@drawable/note_btn_play_white</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="notify_music_next_btn" parent="notify_music_play_btn">
+        <item name="android:src">@drawable/note_btn_next_white</item>
+    </style>
+
+    <style name="notify_music_pre_btn" parent="notify_music_play_btn">
+        <item name="android:src">@drawable/notify_play_music_pre_btn</item>
+    </style>
+
+    <style name="notify_music_close_btn" parent="notify_music_next_btn">
+        <item name="android:src">@drawable/note_btn_close_white</item>
+    </style>
+
 </resources>
