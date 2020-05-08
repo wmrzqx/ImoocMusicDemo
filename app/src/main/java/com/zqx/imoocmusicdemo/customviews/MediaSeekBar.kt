@@ -8,28 +8,40 @@ import android.support.v4.media.session.MediaControllerCompat
 import android.support.v4.media.session.MediaSessionCompat
 import android.support.v4.media.session.PlaybackStateCompat
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.view.animation.LinearInterpolator
+import android.widget.FrameLayout
 import android.widget.SeekBar
+import android.widget.TextView
 import androidx.appcompat.widget.AppCompatSeekBar
+import com.zqx.imoocmusicdemo.R
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * SeekBar that can be used with a [MediaSessionCompat] to track and seek in playing
  * media.
  */
-class MediaSeekBar : AppCompatSeekBar {
+class MediaSeekBar : FrameLayout {
 
     private var mMediaController: MediaControllerCompat? = null
     private var mControllerCallback: ControllerCallback? = null
     private var mIsTracking = false
 
-    private val mOnSeekBarChangeListener: OnSeekBarChangeListener =
-        object : OnSeekBarChangeListener {
+    private var tvCurrentProgress: TextView? = null
+    private var tvTotalProgress: TextView? = null
+    private var mediaSeekBar: AppCompatSeekBar? = null
+
+    private val mOnSeekBarChangeListener: SeekBar.OnSeekBarChangeListener =
+        object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(
                 seekBar: SeekBar?,
                 progress: Int,
                 fromUser: Boolean
             ) {
-
+                tvCurrentProgress?.text =
+                    SimpleDateFormat("mm:ss", Locale.getDefault()).format(Date(progress.toLong()))
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -37,36 +49,41 @@ class MediaSeekBar : AppCompatSeekBar {
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                mMediaController!!.transportControls.seekTo(progress.toLong())
+                mMediaController!!.transportControls.seekTo(seekBar?.progress?.toLong()!!)
                 mIsTracking = false
             }
         }
 
     private var mProgressAnimator: ValueAnimator? = null
 
-    constructor(context: Context?) : super(context) {
-        super.setOnSeekBarChangeListener(mOnSeekBarChangeListener)
+    constructor(context: Context) : super(context) {
+        initView()
     }
 
-    constructor(context: Context?, attrs: AttributeSet?) : super(
+    constructor(context: Context, attrs: AttributeSet?) : super(
         context,
         attrs
     ) {
-        super.setOnSeekBarChangeListener(mOnSeekBarChangeListener)
+        initView()
     }
 
     constructor(
-        context: Context?,
+        context: Context,
         attrs: AttributeSet?,
         defStyleAttr: Int
     ) : super(context, attrs, defStyleAttr) {
-        super.setOnSeekBarChangeListener(mOnSeekBarChangeListener)
+        initView()
     }
 
-    override fun setOnSeekBarChangeListener(l: OnSeekBarChangeListener?) {
-        // Prohibit adding seek listeners to this subclass.
-        throw UnsupportedOperationException("Cannot add listeners to a MediaSeekBar")
+    private fun initView() {
+        val seekBarRoot = LayoutInflater.from(context).inflate(R.layout.media_seekbar, null, false)
+        tvCurrentProgress = seekBarRoot.findViewById(R.id.tv_current_progress)
+        tvTotalProgress = seekBarRoot.findViewById(R.id.tv_total_progress)
+        mediaSeekBar = seekBarRoot.findViewById(R.id.mediaSeekBar)
+        mediaSeekBar?.setOnSeekBarChangeListener(mOnSeekBarChangeListener)
+        addView(seekBarRoot)
     }
+
 
     fun setMediaController(mediaController: MediaControllerCompat?) {
         if (mediaController != null) {
@@ -102,9 +119,9 @@ class MediaSeekBar : AppCompatSeekBar {
                 mProgressAnimator = null
             }
             val progress = state.position.toInt()
-            setProgress(progress)
+            mediaSeekBar?.progress = progress
 
-            var max = max
+            var max = mediaSeekBar?.max ?: 0
 
             if (max <= 100) {
                 max = mMediaController!!.metadata.getLong(MediaMetadataCompat.METADATA_KEY_DURATION)
@@ -127,9 +144,12 @@ class MediaSeekBar : AppCompatSeekBar {
 
         override fun onMetadataChanged(metadata: MediaMetadataCompat) {
             super.onMetadataChanged(metadata)
-            val max = metadata.getLong(MediaMetadataCompat.METADATA_KEY_DURATION).toInt()
+            val max = metadata.getLong(MediaMetadataCompat.METADATA_KEY_DURATION)
 //            progress = 0
-            setMax(max)
+            mediaSeekBar?.max = max.toInt()
+
+            tvTotalProgress?.text = SimpleDateFormat("mm:ss", Locale.getDefault()).format(Date(max))
+
         }
 
 
@@ -140,7 +160,8 @@ class MediaSeekBar : AppCompatSeekBar {
                 return
             }
             val animatedIntValue = valueAnimator.animatedValue as Int
-            progress = animatedIntValue
+            mediaSeekBar?.progress = animatedIntValue
         }
     }
+
 }
